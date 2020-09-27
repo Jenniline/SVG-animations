@@ -1,0 +1,55 @@
+/* remove the basic styling. */
+* {
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+    text-align:center;
+    background-color: black;
+}
+
+#right_wheel,
+#left-wheel{
+    animation: wheel 2s  infinite linear;
+    transform-origin: center;
+    transform-box:fill-box;
+}
+#man_on_the_bike{
+    animation: bike 1s ease-in-out infinite; 
+    transform-origin: bottom;
+}
+#hat{
+    animation: hat 1s ease-in-out infinite;
+    transform-origin: top;
+    transform-box:fill-box;
+}
+
+@keyframes wheel{
+    from{
+        transfrom: rotateZ(0deg);
+    }
+    to{
+        transfrom: rotateZ(360deg);
+
+    }
+}
+
+@keyframes bilke{
+    from{
+        transition: rotateX(0deg);
+    }
+    to{
+        transition: rotateX(20deg);
+    }
+}
+
+@keyframes hat{
+    from{
+        transform: translateY(0%) rotateZ(0deg);
+    }to{
+        transform: translateY(40%) rotateZ(20deg);
+ 
+    }
+}
